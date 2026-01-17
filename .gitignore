@@ -1,3 +1,6 @@
 **/a.out
 **/.breakpoints
-**/.ccls-cache
+**/.ccls-cachenode_modules/
+.replit
+replit.nix
+.config/
