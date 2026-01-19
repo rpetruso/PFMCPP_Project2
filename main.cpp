@@ -16,12 +16,9 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- character
- integer
- boolean
- floating
- double
- void
+ 
+ 
+ 
  
  
  
@@ -67,23 +64,7 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    char name = 'robert';
-    char fish = 'tetra';
-    char letter = 'a
-    int x = 5;
-    int y = 10;
-    int z = 15;
-    bool isTrue = true;
-    bool gateOpen = false;
-    bool computerOn = true;
-    float pi = 3.14159f;
-    float a = 2.7f;
-    float b = 3.14f;
-    double cc = 4;
-    double dd = 8;
-    double ee = 15;
     
-
 
     
     ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
@@ -94,30 +75,6 @@ void variableDeclarations()
  example:
  note: this example shows the result after completing steps 3-8
  */
-
-
-
-
-
-
-
-
-
-
-
-/*
- 1)
- */
-
-void driveCar(int speed, int direction, bool isRaining)
-{
-    ignoreUnused(speed, direction, isRaining);
-}
-
-/*
- 2)
- */
-
 bool rentACar(int rentalDuration, int carType = 0)  //function declaration with random number of arguments, arbitrary number of arguments have default value
 { 
     ignoreUnused(rentalDuration, carType); //passing each function parameter to the ignoreUnused() function
@@ -125,82 +82,44 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 } 
 
 /*
- 3)
+ 1)
  */
 
-int getCarSpeed(int distance, int time, int mph)
-{
-    ignoreUnused(distance, time, mph);
-    return {};
-}
+/*
+ 2)
+ */
+
+/*
+ 3)
+ */
 
 /*
  4)
  */
 
-float divide(float a, float b)
-{
-    ignoreUnused(a, b);
-    return {};
-}    
-
 /*
  5)
  */
-
-double multiply(double a, double b)
-{
-    ignoreUnused(a, b);
-}
-
 
 /*
  6)
  */
 
-int countFlies(int deadFlies, int aliveFlies)
-{
-    ignoreUnused(deadFlies, aliveFlies);
-    return {};
-}
 /*
  7)
  */
 
-float getAverage(float a, float b, float c)
-{
-    ignoreUnused(a, b, c);
-    return {};    
-}
 /*
  8)
  */
-
-bool isBikeRentedAndStoreInfo(int bikeType, int rentalDuration)
-{
-    ignoreUnused(bikeType, rentalDuration);
-    return {};
-}
 
 /*
  9)
  */
 
-int getNumberOfSuits(int suitsRented, int suitsReturned)
-{
-    ignoreUnused(suitsRented, suitsReturned);
-    return {};
-}
-
 /*
  10)
  */
-
-int getNumberOfShoes(int shoesRented, int shoesReturned)
-{
-    ignoreUnused(shoesRented, shoesReturned);
-    return {};
-}
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -222,35 +141,27 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    bool isCarDriving = driveCar(60, 2, 0);
+    
     //2)
-    auto isCarRented = rentACar(60, 0);
+    
     //3)
-    float carSpeed = getCarSpeed(30, 60, 40);
+    
     //4)
-    float quotient = divide(3.14f, 2.f);
+    
     //5)
-    double product = multiply(48, 29);
+    
     //6)
-    int flies = countFlies(23, 59);
+    
     //7)
-    float average = getAverage(4.f, 5.f, 6.f);
+    
     //8)
-    int numberOfSuits = getNumberOfSuits(15, 10);
+    
     //9)
     
     //10)
     
     
     ignoreUnused(carRented);
-    ignoreUnused(isCarDriving);
-    ignoreUnused(isCarRented);
-    ignoreUnused(carSpeed);
-    ignoreUnused(quotient);
-    ignoreUnused(product);
-    ignoreUnused(flies);
-    ignoreUnused(average);
-    ignoreUnused(numberOfSuits);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
