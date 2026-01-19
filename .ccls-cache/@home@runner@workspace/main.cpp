@@ -23,11 +23,6 @@ video: Chapter 2 - Part 3
  double
  void
  
- 
- 
- 
- 
- 
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
     a) give each variable declaration an initial value
         - just ignore wchar_t. you do not need to declare 3 variables of type 'wchar_t'
@@ -67,9 +62,9 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    char name = 'robert';
-    char fish = 'tetra';
-    char letter = 'a
+    const char* name = "robert";
+    const char* fish = "tetra";
+    char letter = 'a';
     int x = 5;
     int y = 10;
     int z = 15;
@@ -83,10 +78,22 @@ void variableDeclarations()
     double dd = 8;
     double ee = 15;
     
-
-
-    
     ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(name);
+    ignoreUnused(fish);
+    ignoreUnused(letter);
+    ignoreUnused(x);
+    ignoreUnused(y);
+    ignoreUnused(z);
+    ignoreUnused(isTrue);
+    ignoreUnused(gateOpen);
+    ignoreUnused(computerOn);
+    ignoreUnused(pi);
+    ignoreUnused(a);
+    ignoreUnused(b);
+    ignoreUnused(cc);
+    ignoreUnused(dd);
+    ignoreUnused(ee);
 }
 
 /*
@@ -95,23 +102,14 @@ void variableDeclarations()
  note: this example shows the result after completing steps 3-8
  */
 
-
-
-
-
-
-
-
-
-
-
 /*
  1)
  */
 
-void driveCar(int speed, int direction, bool isRaining)
+bool driveCar(int speed, int direction, bool isRaining)
 {
     ignoreUnused(speed, direction, isRaining);
+    return {};
 }
 
 /*
@@ -151,6 +149,7 @@ float divide(float a, float b)
 double multiply(double a, double b)
 {
     ignoreUnused(a, b);
+    return {};
 }
 
 
@@ -163,6 +162,7 @@ int countFlies(int deadFlies, int aliveFlies)
     ignoreUnused(deadFlies, aliveFlies);
     return {};
 }
+
 /*
  7)
  */
@@ -172,6 +172,7 @@ float getAverage(float a, float b, float c)
     ignoreUnused(a, b, c);
     return {};    
 }
+
 /*
  8)
  */
